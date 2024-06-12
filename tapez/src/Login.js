@@ -6,6 +6,7 @@ const Login = () => {
   return (
     <>
     <Navbar/>
+    
     <div className="addUser">
       <h3>Login</h3>
       <form className="addUserForm">
@@ -36,8 +37,11 @@ const Login = () => {
         <div class="btn btn-style w-10">
           Sign Up
         </div>
+       
       </div>
     </div>
+  
+    
     </>
   );
 };
