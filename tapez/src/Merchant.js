@@ -1,21 +1,21 @@
-//yo user login ko form
-
-
-
-
-import React from "react";
-// import { Link } from "react-router-dom";
-import Navbar from "./components/navbar";
-const Register= () => {
+import React from 'react'
+import Navbar from './components/navbar'
+const Merchant = () => {
   return (
+ 
     <>
     <Navbar/>
-    {/* user side ko lagi */}
+    {/* Merchant side ko lagi  */}
     <section className="container main-hero-container">
-    <div className="addUser">
-      <h3>Sign Up as user</h3>
+
+    
+    <div className="addUser ">
+      <h3>Sign Up as Merchant</h3>
       <form className="addUserForm">
         <div className="inputGroup">
+          
+      
+                    
           <label htmlFor="name">Name:</label>
           <input
             type="text"
@@ -24,6 +24,25 @@ const Register= () => {
             autoComplete="off"
             placeholder="Enter your name"
           />
+        
+          <label htmlFor="phone">Phone:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            autoComplete="off"
+            placeholder="Enter your Email"
+          />
+             <label htmlFor="name">Pan Number:</label>
+          <input
+            type="number"
+            id="name"
+            name="name"
+            autoComplete="off"
+            placeholder="Enter your pan number"
+          />
+          
+          
           <label htmlFor="email">Email:</label>
           <input
             type="email"
@@ -40,6 +59,7 @@ const Register= () => {
             autoComplete="off"
             placeholder="Enter Password"
           />
+        
           <button type="submit" class="btn btn-style w-100">
             Sign Up
           </button>
@@ -53,11 +73,13 @@ const Register= () => {
       </div>
     
     </div>
-    
-   
     </section>
     </>
   );
 };
 
-export default Register;
+
+
+
+
+export default Merchant;

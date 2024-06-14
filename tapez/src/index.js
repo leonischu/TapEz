@@ -4,6 +4,8 @@ import './index.css';
 import App from './App';
 import Login from './Login';
 import Signup from './Signup';
+import Merchant from './Merchant';
+import Register from './Register';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -27,6 +29,18 @@ const router = createBrowserRouter([
     path: "signup",
     element:
     <Signup/>
+    
+  },
+  {
+    path: "merchant",
+    element:
+    <Merchant/>
+    
+  },
+  {
+    path: "register",
+    element:
+    <Register/>
     
   },
   

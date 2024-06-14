@@ -1,6 +1,6 @@
 import React from "react";
-import Navbar from "./components/navbar"; // Ensure the path to Navbar is correct
-
+import Navbar from "./components/navbar"; 
+import { Link } from 'react-router-dom';
 const Signup = () => {
   return (
     <>
@@ -10,13 +10,24 @@ const Signup = () => {
           <div className="image">
             <img src="./images/sign.jpg" alt="Merchant" />
           </div>
-          <button className="btn_reg btn-merchant">Sign in as Merchant</button>
+          <button className="btn_reg btn-merchant">
+          <Link className="nav-link active" to="/merchant">
+          Sign in as Merchant
+                  </Link>
+            
+            
+            </button>
         </div>
         <div className="button-container right">
           <div className="image">
             <img src="./images/user.jpg" alt="User" />
           </div>
-          <button className="btn_reg btn-user">Sign in as User</button>
+          <button className="btn_reg btn-user">
+          <Link className="nav-link active" to="/register">
+          Sign in as User
+                  </Link>
+            
+            </button>
         </div>
       </div>
     </>
