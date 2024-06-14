@@ -460,3 +460,108 @@ footer .main-hero-para {
   text-transform: uppercase;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
 }
+/* signup page */
+/* Add this to your CSS file */
+
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #008CBA;
+  --bgcolor: #f0f2f5;
+  --btn-hover-color: #5a5a5a;
+  --gradient-start: #6a11cb;
+  --gradient-end: #2575fc;
+}
+
+
+.signup-container {
+  background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.button-container:hover {
+  transform: translateY(-10px);
+}
+
+.button-container img {
+  width: 250px;
+  height: 250px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn_reg {
+  padding: 15px 30px;
+  font-size: 1.6rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  text-transform: capitalize;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn-merchant {
+  margin-left: 15px;
+  background-color: var(--secondary-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-user {
+  margin-right : 25px;
+  background-color: var(--secondary-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-user:hover,
+.btn-merchant:hover {
+
+  border: 0.1rem solid var(--primary-color);
+  background-color: transparent;
+  color: var(--primary-color);
+  box-shadow: 0 0.2rem 0.5rem rgba(183, 171, 255, 0.5);
+}
+
+.button-container.left {
+  align-items: flex-start;
+}
+
+.button-container.right {
+  align-items: flex-end;
+}
+
+@media (max-width: 768px) {
+  .signup-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .button-container {
+    margin-bottom: 20px;
+  }
+
+  .button-container.left,
+  .button-container.right {
+    align-items: center;
+  }
+}
