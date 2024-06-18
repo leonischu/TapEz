@@ -1,3 +1,9 @@
+
+
+
+
+
+
 //yo user login ko form
 
 
@@ -6,12 +12,18 @@
 import React from "react";
 // import { Link } from "react-router-dom";
 import Navbar from "./components/navbar";
+import Footer from "./components/Footer";
 const Register= () => {
   return (
     <>
     <Navbar/>
+    
     {/* user side ko lagi */}
-    <section className="container main-hero-container">
+    
+    <div className="loginpage">
+      <div className="login-img">
+      <img src="./images/logo.png" alt="" /></div>
+   
     <div className="addUser">
       <h3>Sign Up as user</h3>
       <form className="addUserForm">
@@ -53,9 +65,9 @@ const Register= () => {
       </div>
     
     </div>
-    
+    </div>
    
-    </section>
+    <Footer/>
     </>
   );
 };

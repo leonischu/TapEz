@@ -6,7 +6,9 @@ const Login = () => {
   return (
     <>
     <Navbar/>
-    
+    <div className="loginpage">
+      <div className="login-img">
+      <img src="./images/logo.png" alt="" /></div>
     <div className="addUser">
       <h3>Login</h3>
       <form className="addUserForm">
@@ -39,7 +41,7 @@ const Login = () => {
         </div>
        
       </div>
-    </div>
+    </div></div> 
   
     
     </>

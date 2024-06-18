@@ -423,7 +423,8 @@ footer .main-hero-para {
 .addUser {
   background-color: white;
   width: 25%;
-  margin: 50px auto;
+  margin: 50px  auto;
+  
   /* margin in top and bottom will be 50px  */
   /* left and right auto  */
   padding: 40px;
@@ -460,7 +461,25 @@ footer .main-hero-para {
 .login .btn.btn-primary {
   width: 50%;
 }
+.loginpage{
+  height: 80vh;
+  display: flex;
+ 
+    background-color:FFF6E9;
 
+ 
+  
+}
+.loginpage img{
+  margin-top:20% ;
+  margin-left: 20%;
+}
+
+
+/* .loginimg
+{width: 100px;
+height: 100px;
+} */
 .addUser h3 {
   text-align: center;
   font-weight: bold;
