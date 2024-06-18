@@ -12,7 +12,12 @@ const Navbar = () => {
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <div className="container">
             <a className="navbar-brand" href="#">
-              TapEz
+              <div className="logo">
+              <Link className="nav-link active" to="/">
+              <img src="./images/logo.png"></img>
+                  </Link>
+              </div>
+              
             </a>
             <button
               className="navbar-toggler"

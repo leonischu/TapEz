@@ -22,7 +22,7 @@ html {
 
 a {
   text-decoration: none;
-  color: #fff;
+  color:black;
 }
 
 h1,
@@ -35,12 +35,20 @@ h6 {
 }
 
 /*  navbar css style starts */
+.nav-link {
+  color:black;
+}
+
 
 .navbar-bg {
   background-color: var(--bgcolor);
   padding: 2rem 0;
   z-index: 99;
   position: relative;
+}
+
+.logo img{
+  width: 25%;
 }
 
 .navbar-brand {
@@ -464,7 +472,7 @@ footer .main-hero-para {
 /* Add this to your CSS file */
 
 :root {
-  --primary-color: #007bff;
+  
   --secondary-color: #008CBA;
   --bgcolor: #f0f2f5;
   --btn-hover-color: #5a5a5a;
@@ -564,4 +572,7 @@ footer .main-hero-para {
   .button-container.right {
     align-items: center;
   }
+}
+.Link{
+  color: black;
 }
