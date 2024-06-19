@@ -423,8 +423,8 @@ footer .main-hero-para {
 .addUser {
   background-color: white;
   width: 25%;
-  margin: 50px  auto;
-  
+  margin: 50px auto;
+  margin-left: 22%;
   /* margin in top and bottom will be 50px  */
   /* left and right auto  */
   padding: 40px;
@@ -464,7 +464,6 @@ footer .main-hero-para {
 .loginpage{
   height: 80vh;
   display: flex;
- 
     background-color:FFF6E9;
 
  
@@ -472,7 +471,7 @@ footer .main-hero-para {
 }
 .loginpage img{
   margin-top:20% ;
-  margin-left: 20%;
+  margin-left: 30%;
 }
 
 
@@ -499,15 +498,44 @@ height: 100px;
   --gradient-end: #2575fc;
 }
 
-
 .signup-container {
-  background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+  position: relative;
   min-height: 100vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding: 20px;
+  background-color: #f0f0f0; /* Fallback background color */
+  overflow: hidden; /* Ensure the pseudo-element does not overflow the container */
 }
+
+.signup-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('/public/images/bg.png') no-repeat center;
+  background-size: 100% auto;
+  filter: blur(10px); /* Apply the blur effect */
+  z-index: -1; /* Ensure the pseudo-element stays behind the content */
+}
+
+.signup-container .content {
+  position: relative;
+  z-index: 1; /* Ensure the content stays above the blurred background */
+}
+
+/* Media query example for responsive design */
+@media (max-width: 768px) {
+  .signup-container {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+
 
 .button-container {
   display: flex;

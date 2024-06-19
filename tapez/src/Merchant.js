@@ -6,7 +6,9 @@ const Merchant = () => {
     <>
     <Navbar/>
     {/* Merchant side ko lagi  */}
-    <section className="container main-hero-container">
+   <div className="loginpage">
+   <div className="login-img">
+   <img src="./images/logo.png" alt="" /></div>
 
     
     <div className="addUser ">
@@ -73,7 +75,8 @@ const Merchant = () => {
       </div>
     
     </div>
-    </section>
+    </div>
+    
     </>
   );
 };

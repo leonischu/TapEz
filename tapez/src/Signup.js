@@ -1,3 +1,6 @@
+// user and merchant signup
+
+
 import React from "react";
 import Navbar from "./components/navbar"; 
 import { Link } from 'react-router-dom';
@@ -5,7 +8,9 @@ const Signup = () => {
   return (
     <>
       <Navbar />
+      
       <div className="signup-container">
+        
         <div className="button-container left">
           <div className="image">
             <img src="./images/sign.jpg" alt="Merchant" />
@@ -30,6 +35,7 @@ const Signup = () => {
             </button>
         </div>
       </div>
+    
     </>
   );
 };
