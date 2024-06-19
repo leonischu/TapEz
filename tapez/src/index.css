@@ -20,9 +20,17 @@ html {
   font-size: 62.5%;
 }
 
-a {
+.navbar-bg a {
   text-decoration: none;
   color:black;
+}
+
+footer a{
+  text-decoration: none;
+  color:white;
+}
+footer a:hover{
+  color: var(--primary-color);
 }
 
 h1,
@@ -36,7 +44,8 @@ h6 {
 
 /*  navbar css style starts */
 .nav-link {
-  color:black;
+  text-decoration: none;
+  color:#fff;
 }
 
 
@@ -75,7 +84,7 @@ h6 {
   width: 12rem;
   height: 4rem;
   border-radius: 2rem;
-  color: #fff;
+  /* color: #fff; */
   background-color: var(--primary-color);
   text-transform: capitalize;
   font-size: 1.6rem;
@@ -489,53 +498,39 @@ height: 100px;
 /* signup page */
 /* Add this to your CSS file */
 
-:root {
+/* :root {
   
   --secondary-color: #008CBA;
   --bgcolor: #f0f2f5;
   --btn-hover-color: #5a5a5a;
   --gradient-start: #6a11cb;
   --gradient-end: #2575fc;
-}
+} */
+
+
 
 .signup-container {
-  position: relative;
+  background-color: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
   min-height: 100vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding: 20px;
-  background-color: #f0f0f0; /* Fallback background color */
-  overflow: hidden; /* Ensure the pseudo-element does not overflow the container */
+
+  /* background: url('/public/images/bg.png') no-repeat center; */
+  
+  /* filter: blur(10px); */
+  
 }
 
-.signup-container::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url('/public/images/bg.png') no-repeat center;
-  background-size: 100% auto;
-  filter: blur(10px); /* Apply the blur effect */
-  z-index: -1; /* Ensure the pseudo-element stays behind the content */
-}
 
-.signup-container .content {
-  position: relative;
-  z-index: 1; /* Ensure the content stays above the blurred background */
-}
 
-/* Media query example for responsive design */
 @media (max-width: 768px) {
   .signup-container {
     flex-direction: column;
     justify-content: center;
   }
 }
-
-
 
 .button-container {
   display: flex;
@@ -546,6 +541,7 @@ height: 100px;
   border-radius: 15px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
+  width: 40%;
 }
 
 .button-container:hover {
@@ -574,17 +570,23 @@ height: 100px;
 
 .btn:hover {
   opacity: 0.9;
-}
+} 
 
 .btn-merchant {
   margin-left: 15px;
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
+  color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+
+}
+.btn-merchant a:hover{
+  color:var(--primary-color);
 }
 
 .btn-user {
   margin-right : 25px;
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -598,11 +600,11 @@ height: 100px;
 }
 
 .button-container.left {
-  align-items: flex-start;
+  align-items: center;
 }
 
 .button-container.right {
-  align-items: flex-end;
+  align-items: center;
 }
 
 @media (max-width: 768px) {

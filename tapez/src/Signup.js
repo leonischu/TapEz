@@ -3,6 +3,7 @@
 
 import React from "react";
 import Navbar from "./components/navbar"; 
+import Footer from "./components/Footer";
 import { Link } from 'react-router-dom';
 const Signup = () => {
   return (
@@ -35,6 +36,7 @@ const Signup = () => {
             </button>
         </div>
       </div>
+      <Footer/>
     
     </>
   );
