@@ -1,13 +1,16 @@
 import React from 'react';
 
-import Welcome from './Welcome';
+// import Welcome from './Logged in/Welcome';
+import Naavbar from './Logged in/Naavbar';
 
 const App = () => {
   return (
     <>
+    
   
-    <Welcome/>
+      <Naavbar />
       
+   
     </>
   )
 }

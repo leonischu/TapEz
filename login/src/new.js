@@ -1,12 +1,12 @@
 
-import React, { useState, useEffect, useRef } from 'react';
-import user from './Navbar/img/user.png';
-import edit from './Navbar/img/edit.png';
-import inbox from './Navbar/img/envelope.png';
-import settings from './Navbar/img/settings.png';
-import help from './Navbar/img/question.png';
-import logout from './Navbar/img/log-out.png';
-import DropdownItem from './DropdownItem';
+// import React, { useState, useEffect, useRef } from 'react';
+// import user from './Navbar/img/user.png';
+// import edit from './Navbar/img/edit.png';
+// import inbox from './Navbar/img/envelope.png';
+// import settings from './Navbar/img/settings.png';
+// import help from './Navbar/img/question.png';
+// import logout from './Navbar/img/log-out.png';
+// import DropdownItem from './DropdownItem';
 
 const  Welcome = () => {
   const [open, setOpen] = useState(false);
@@ -35,9 +35,7 @@ const  Welcome = () => {
   return (
     <>
  <nav className="navbar">
-    <div className="logo">
-      <img src="./images/logo.png" alt="Logo"/>
-    </div>
+    
     <div className="search-bar">
     <i class="fa fa-search"></i>
       <input type="text" placeholder="Search your query..." />
