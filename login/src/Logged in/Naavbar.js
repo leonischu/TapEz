@@ -1,53 +1,130 @@
-import React, { useState } from "react"
-import user from './Navbar/img/user.png';
-import edit from './Navbar/img/edit.png';
-import inbox from './Navbar/img/envelope.png';
-import settings from './Navbar/img/settings.png';
-import help from './Navbar/img/question.png';
-import logout from './Navbar/img/log-out.png';
-import DropdownItem from "./DropdownItem";
+import * as React from 'react';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import IconButton from '@mui/material/IconButton';
+import Typography from '@mui/material/Typography';
+import Menu from '@mui/material/Menu';
+import MenuIcon from '@mui/icons-material/Menu';
+import Container from '@mui/material/Container';
+import Avatar from '@mui/material/Avatar';
+import Button from '@mui/material/Button';
+import Tooltip from '@mui/material/Tooltip';
+import MenuItem from '@mui/material/MenuItem';
 
 
-const Naavbar = () => {
-const[open,setOpen]=useState(false);
+const pages = ['Products', 'Wallet', ''];
+const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+
+function ResponsiveAppBar() {
+  const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const [anchorElUser, setAnchorElUser] = React.useState(null);
+
+  const handleOpenNavMenu = (event) => {
+    setAnchorElNav(event.currentTarget);
+  };
+  const handleOpenUserMenu = (event) => {
+    setAnchorElUser(event.currentTarget);
+  };
+
+  const handleCloseNavMenu = () => {
+    setAnchorElNav(null);
+  };
+
+  const handleCloseUserMenu = () => {
+    setAnchorElUser(null);
+  };
 
   return (
-    <>
+    <AppBar position="static">
+      <Container maxWidth="xl">
+        <Toolbar disableGutters>
+          <div className="logo">
+          <img src="./images/logo.png" alt="logo" />
+          </div>
+          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+            <IconButton
+              size="large"
+              aria-label="account of current user"
+              aria-controls="menu-appbar"
+              aria-haspopup="true"
+              onClick={handleOpenNavMenu}
+              color="inherit"
+            >
+              <MenuIcon />
+            </IconButton>
+            <Menu
+              id="menu-appbar"
+              anchorEl={anchorElNav}
+              anchorOrigin={{
+                vertical: 'bottom',
+                horizontal: 'left',
+              }}
+              keepMounted
+              transformOrigin={{
+                vertical: 'top',
+                horizontal: 'left',
+              }}
+              open={Boolean(anchorElNav)}
+              onClose={handleCloseNavMenu}
+              sx={{
+                display: { xs: 'block', md: 'none' },
+              }}
+            >
+              {pages.map((page) => (
+                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center">{page}</Typography>
+                </MenuItem>
+              ))}
+            </Menu>
+          </Box>
+       
          
-         <nav className="navbar">
-      <div className="navbar-brand">
-        <a href="#"><img src="./images/logo.png" alt="TapEz" /></a>
-      </div>
-      <div className="navbar-search">
-        <input type="text" placeholder="Search your query..." />
-        <img src="search-icon.png" alt="Search" className="search-icon " />
-      </div>
-      <div className="navbar-icons">
-        <div className="setting">
-        <img src="./images/notification.svg" alt="Notifications" className="icon"   onClick={()=>{setOpen(!open)}}/>
-        <div className={`dropdown-menu ${open? 'active' : 'inactive'}`} >
-          <h3>The Kiet<br/><span>Website Designer</span></h3>
-          <ul>
-            <DropdownItem img = {user} text = {"My Profile"}/>
-            <DropdownItem img = {edit} text = {"Edit Profile"}/>
-            <DropdownItem img = {inbox} text = {"Inbox"}/>
-            <DropdownItem img = {settings} text = {"Settings"}/>
-            <DropdownItem img = {help} text = {"Helps"}/>
-            <DropdownItem img = {logout} text = {"Logout"}/>
-          </ul>
-        </div>
-
-
-
             
-        </div>
-        <img src="./images/settings.svg" alt="Settings" className="icon" />
-      </div>
-    </nav>
-
-
-    </>
+        
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+            {pages.map((page) => (
+              <Button
+                key={page}
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: 'white', display: 'block' }}
+              >
+                {page}
+              </Button>
+            ))}
+          </Box>
+          <Box sx={{ flexGrow: 0 }}>
+            <Tooltip title="Open settings">
+              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+                <Avatar alt="Remy Sharp" src="./images/user.png" />
+              </IconButton>
+            </Tooltip>
+            <Menu
+              sx={{ mt: '45px' }}
+              id="menu-appbar"
+              anchorEl={anchorElUser}
+              anchorOrigin={{
+                vertical: 'top',
+                horizontal: 'right',
+              }}
+              keepMounted
+              transformOrigin={{
+                vertical: 'top',
+                horizontal: 'right',
+              }}
+              open={Boolean(anchorElUser)}
+              onClose={handleCloseUserMenu}
+            >
+              {settings.map((setting) => (
+                <MenuItem key={setting} onClick={handleCloseUserMenu}>
+                  <Typography textAlign="center">{setting}</Typography>
+                </MenuItem>
+              ))}
+            </Menu>
+          </Box>
+        </Toolbar>
+      </Container>
+    </AppBar>
   );
-};
-
-export default Naavbar;
+}
+export default ResponsiveAppBar;
