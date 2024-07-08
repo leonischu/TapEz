@@ -1,0 +1,8 @@
+ npm install change-case
+npm install @mui/lab @mui/material
+ npm install react-helmet-async @iconify/react simplebar-react
+ npm install react-router-dom
+ npm install notistack
+ npm install @mui/material @mui/styled-engine-sc styled-components
+npm install @mui/icons-material
+npm install @mui/material @emotion/react @emotion/styled
