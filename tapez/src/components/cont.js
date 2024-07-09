@@ -31,7 +31,7 @@ const Cont = () => {
               })}
 
               <br />
-              <button className="btn-style btn-style-border">learn more</button>
+              {/* <button className="btn-style btn-style-border">learn more</button> */}
             </div>
 
             {/* images section  */}

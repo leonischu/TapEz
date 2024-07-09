@@ -1,41 +1,19 @@
-
-
-
-
-
-
-//yo user login ko form
-
-
-
-
 import React from "react";
-// import { Link } from "react-router-dom";
-import Navbar from "./components/navbar";
-import Footer from "./components/Footer";
-const Register= () => {
+import Navbar from "../components/navbar";
+import { Link } from "react-router-dom";
+import Footer from "../components/Footer";
+
+const Login = () => {
   return (
     <>
     <Navbar/>
-    
-    {/* user side ko lagi */}
-    
     <div className="loginpage">
       <div className="login-img">
       <img src="./images/logo.png" alt="" /></div>
-   
     <div className="addUser">
-      <h3>Sign Up as user</h3>
+      <h3>Login</h3>
       <form className="addUserForm">
         <div className="inputGroup">
-          <label htmlFor="name">Name:</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            autoComplete="off"
-            placeholder="Enter your name"
-          />
           <label htmlFor="email">Email:</label>
           <input
             type="email"
@@ -50,26 +28,27 @@ const Register= () => {
             id="password"
             name="password"
             autoComplete="off"
-            placeholder="Enter Password"
+            placeholder="Enter your Password"
           />
           <button type="submit" class="btn btn-style w-100">
-            Sign Up
+            Login
           </button>
         </div>
       </form>
       <div className="login">
-        <p>Already have an Account? </p>
+        <p>Don't have Account? </p>
         <div class="btn btn-style w-10">
-          Login
+        <Link to="/signup">
+                    Sign Up
+                  </Link>
         </div>
+       
       </div>
-    
-    </div>
-    </div>
-   
+    </div></div> 
+  
     <Footer/>
     </>
   );
 };
 
-export default Register;
+export default Login;

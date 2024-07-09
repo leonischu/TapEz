@@ -9,7 +9,7 @@ const Navbar = () => {
   return (
     <>
       <section className="navbar-bg">
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <nav className="navbar navbar-expand-lg">
           <div className="container">
             <a className="navbar-brand" href="#">
               <div className="logo">
@@ -38,19 +38,17 @@ const Navbar = () => {
                     Home
                   </Link>
                 </li>
+               
                 <li className="nav-item">
                   <a className="nav-link" href="#">
-                    Services
+                  <Link to="/about">
+                  About</Link>  
                   </a>
                 </li>
                 <li className="nav-item">
                   <a className="nav-link" href="#">
-                    About
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#">
-                    Contact
+                  <Link to="/contactLink">
+                  Contact</Link>  
                   </a>
                 </li>
               </ul>

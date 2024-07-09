@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -12,10 +13,12 @@ const Footer = () => {
                   <h2>Company</h2>
                   <ul>
                     <li>
-                      <a href="#">About</a>
+                    <Link to="/about">
+                    About</Link>  
                     </li>
                     <li>
-                      <a href="#">Contact</a>
+                    <Link to="/contactLink">
+                      Contact</Link>
                     </li>
                    
                   </ul>
@@ -25,7 +28,8 @@ const Footer = () => {
                   <h2>Support</h2>
                   <ul>
                     <li>
-                      <a href="#">Contact</a>
+                      <Link to="/contactLink">
+                      Contact</Link>
                     </li>
                     <li>
                       <a href="mailto:abc@mail.com">Email</a>
@@ -41,11 +45,10 @@ const Footer = () => {
                   <h2>Services</h2>
                   <ul>
                     <li>
-                      <a href="#">How to use the app?</a>
+                      <Link to="/howitLink">
+                      <a href="#">How to use the app?</a></Link>
                     </li>
-                    <li>
-                      <a href="#">Support</a>
-                    </li>
+                 
                     
                   </ul>
                 </div>
@@ -54,20 +57,29 @@ const Footer = () => {
                   <h2>Follow Us</h2>
                   <div className="row">
                     <div className="col-3 mx-auto">
-                      <i class="fab fa-facebook-f fontawesome-style"></i>
+                    <a
+                        href="https://www.facebook.com/#/"
+                        target="_blank">
+                      <i class="fab fa-facebook-f fontawesome-style"></i></a>
                     </div>
                     <div className="col-3 mx-auto">
                       <a
                         href="https://www.instagram.com/#/"
-                        target="_thapa">
+                        target="_blank">
                         <i class="fab fa-instagram fontawesome-style"></i>
                       </a>
                     </div>
                     <div className="col-3 mx-auto">
-                      <i class="fab fa-youtube fontawesome-style"></i>
+                    <a
+                        href="https://www.Youtube.com/#/"
+                        target="_blank">
+                      <i class="fab fa-youtube fontawesome-style"></i></a>
                     </div>
                     <div className="col-3 mx-auto">
-                      <i class="fab fa-twitter fontawesome-style"></i>
+                    <a
+                        href="https://www.x.com/#/"
+                        target="_blank">
+                      <i class="fab fa-twitter fontawesome-style"></i></a>
                     </div>
                   </div>
                 </div>

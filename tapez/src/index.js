@@ -2,14 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import Login from './Login';
-import Signup from './Signup';
-import Merchant from './Merchant';
-import Register from './Register';
+import Login from './Login/Login';
+import Signup from './Login/Signup';
+import Merchant from './Login/Merchant';
+import Register from './Login/Register';
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import HowItWorks from './components/Howitworks';
+import ContactLink from './Links/ContactLink';
+import HowItLink from './Links/HowitLink';
+import AboutUs from './Links/AboutUs';
 
 
 const router = createBrowserRouter([
@@ -43,6 +47,19 @@ const router = createBrowserRouter([
     <Register/>
     
   },
+  {
+    path:"howitLink",element:
+    <HowItLink/>
+
+  },
+  {
+    path:"contactLink",
+    element:<ContactLink/>
+  },
+  {
+path:"about",
+element:<AboutUs/>
+  }
   
 ]);
 

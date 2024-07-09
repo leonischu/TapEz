@@ -11,9 +11,11 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
+import { Link} from 'react-router-dom';
 
 
-const pages = ['Products', 'Wallet', 'Transactions'];
+
+const pages = ['Products ', 'Wallet', 'Transactions'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function ResponsiveAppBar() {
@@ -56,6 +58,7 @@ function ResponsiveAppBar() {
             <Menu
               id="menu-appbar"
               anchorEl={anchorElNav}
+              
               anchorOrigin={{
                 vertical: 'bottom',
                 horizontal: 'left',

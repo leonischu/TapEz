@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import workapi from "../API/workApi.js";
-import Navbar from "./navbar.js";
-import Footer from "./Footer.js";
-const HowItWorks = () => {
+import Navbar from "../components/navbar.js";
+import Footer from "../components/Footer.js";
+const HowItLink = () => {
   const [workData, setWorkData] = useState(workapi);
   console.log(workData);
   return (
     <>
+    <Navbar/>
     
       <section>
         <div className="work-container container">
@@ -27,10 +28,11 @@ const HowItWorks = () => {
           </div>
         </div>
       </section>
+      <Footer/>
       
     </>
   
   );
 };
 
-export default HowItWorks;
+export default  HowItLink;

@@ -22,7 +22,7 @@ const App = () => {
   };
   return (
     <>
-    <ProductPage/>
+    {/* <ProductPage/> */}
     {/* < MerchantProfile/> */}
     {/* <UserProfile/> */}
  

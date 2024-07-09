@@ -7,11 +7,12 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  
 }
 
 :root {
-  --bgcolor: #f1f5fd;
-  --primary-color: #6f5de7;
+  --bgcolor: #F3F7EC;
+  --primary-color: #006989;
   --text-color: #828286;
   --main-text-color: #333333;
 }
@@ -19,10 +20,13 @@
 html {
   font-size: 62.5%;
 }
+.navbar{
+  background-color:  #1ABC9C ;
+}
 
 .navbar-bg a {
   text-decoration: none;
-  color:black;
+  color:#fff;
 }
 
 footer a{
@@ -42,11 +46,15 @@ h6 {
   color: #333333;
 }
 
+
 /*  navbar css style starts */
 .nav-link {
   text-decoration: none;
   color:#fff;
+
+  
 }
+
 
 
 .navbar-bg {
@@ -103,11 +111,15 @@ h6 {
 
 .btn-style-border {
   border: 0.1rem solid var(--primary-color);
-  background-color: transparent;
+
   color: var(--primary-color);
   box-shadow: 0 0.2rem 0.5rem rgba(183, 171, 255, 0.5);
 }
+/* navbar button transparent */
+.navbar .btn-style-border{
+  background-color: transparent;
 
+}
 .btn-style-border:hover {
   color: #fff;
   background-color: var(--primary-color);
@@ -200,7 +212,28 @@ header {
   top: -2%;
   box-shadow: 0.8rem 0 0.8rem rgba(0, 0, 0, 0.25);
 }
+/* responsive */
+@media (max-width: 768px) {
+  .main-hero-container {
+    flex-direction: column; /* Stacks elements vertically on smaller screens */
+    height: auto;
+  }
 
+  .main-hero-para {
+    width: 100%; /* Makes the paragraph full width on smaller screens */
+    font-size: 1.2rem;
+  }
+
+  .main-herosection-images img {
+    margin-top: 2rem; /* Adjusts the top margin for smaller screens */
+  }
+
+  .main-herosection-images .main-hero-img2 {
+    width: 70%;
+    left: 15%;
+    top: -5%;
+  }
+}
 /*Hero sEction  ends  */
 /* --------------------------------- Work Section below hero section   starts  
                         -------------------------------------------------------*/
@@ -247,6 +280,10 @@ header {
                         -------------------------------------------------------*/
 .common-section {
   margin: 5rem 0;
+}
+.our-services{
+  background-color: var(--bgcolor);
+
 }
 
 .our-services img {
@@ -352,7 +389,7 @@ header {
 
 footer {
   padding: 5rem 0;
-  background-color: #182334;
+  background-color:  #1ABC9C;
   color: #fff;
 }
 
@@ -400,6 +437,7 @@ footer .fontawesome-style:hover {
 
 footer .main-hero-para {
   margin: 0;
+  color: black;
 }
 
 /*  Footer  Section ends  */
@@ -474,6 +512,7 @@ footer .main-hero-para {
   height: 80vh;
   display: flex;
     background-color:FFF6E9;
+    margin-bottom: 5%;
 
  
   
@@ -510,7 +549,7 @@ height: 100px;
 
 
 .signup-container {
-  background-color: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+  background-color: var(--bgcolor);
   min-height: 100vh;
   display: flex;
   justify-content: space-around;
@@ -622,6 +661,15 @@ height: 100px;
     align-items: center;
   }
 }
-.Link{
+.Link {
   color: black;
+}
+ .btn-style  {
+  color: white;
+}
+ 
+
+.aboutLink{
+  margin-top: 5%;
+  margin-bottom: 7%;
 }

@@ -72,7 +72,7 @@ export default function ProductPage() {
       <Container sx={{ minWidth: '100%', mt: 5 }}>
         <Stack direction="row" alignItems="center" justifyContent="space-between" mb={2}>
           <Typography variant="h4" gutterBottom align="center">
-            Our Beautiful Products
+            Our  Products
           </Typography>
           <Button component={Link} to="/cart" variant="contained" color="primary" startIcon={
             <Badge badgeContent={cart.length} color="error">

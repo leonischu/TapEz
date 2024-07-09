@@ -1,5 +1,7 @@
 import React from 'react'
-import Navbar from './components/navbar'
+import Navbar from '../components/navbar'
+import { Link } from 'react-router-dom';
+import Footer from '../components/Footer';
 const Merchant = () => {
   return (
  
@@ -65,18 +67,21 @@ const Merchant = () => {
           <button type="submit" class="btn btn-style w-100">
             Sign Up
           </button>
-        </div>
-      </form>
-      <div className="login">
+          <div className="login">
         <p>Already have an Account? </p>
         <div class="btn btn-style w-10">
-          Login
+        <Link to="/login">
+                    Log in
+                  </Link>
         </div>
       </div>
+        </div>
+      </form>
+     
     
     </div>
     </div>
-    
+    <Footer/>
     </>
   );
 };

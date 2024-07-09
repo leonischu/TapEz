@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import howToUseApp from "../API/howToUse.js";
+import { Link } from "react-router-dom";
 
 const Aboutus = () => {
   const [aboutData, setAboutData] = useState(howToUseApp);
@@ -33,7 +34,11 @@ const Aboutus = () => {
               })}
 
               <br />
-              <button className="btn-style btn-style-border">learn more</button>
+              <Link className="nav-link active" to="/signup">
+              <button className="btn-style btn-style-border">
+              Sign in</button>
+                  </Link>
+             
             </div>
           </div>
         </div>

@@ -1,9 +1,12 @@
+
+
+
 // user and merchant signup
 
 
 import React from "react";
-import Navbar from "./components/navbar"; 
-import Footer from "./components/Footer";
+import Navbar from "../components/navbar"; 
+import Footer from "../components/Footer";
 import { Link } from 'react-router-dom';
 const Signup = () => {
   return (
