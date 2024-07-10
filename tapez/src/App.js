@@ -9,18 +9,20 @@ import AboutUs from './components/Aboutus';
 import Cont from './components/cont';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import HomeP from './HOME/HomeP';
 
 
 const App = () => {
   return (
    <>
-   <Navbar/>
+   <HomeP></HomeP>
+   {/* <Navbar/>
           <Header />
           <HowItWorks />
           <AboutUs />
           <Cont />
           <Contact />
-          <Footer />
+          <Footer /> */}
           </>
           
       

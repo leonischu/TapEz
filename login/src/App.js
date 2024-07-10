@@ -11,6 +11,7 @@ import NewWallet from './Wallet/NewWallet';
 import AddFunds from './Wallet/AddFunds';
 //cart ko lagi
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import HomeP from './HomeP';
 
 import CartPage from './Products/Cart';
 
@@ -22,6 +23,7 @@ const App = () => {
   };
   return (
     <>
+    <HomeP/>
     {/* <ProductPage/> */}
     {/* < MerchantProfile/> */}
     {/* <UserProfile/> */}
@@ -33,7 +35,7 @@ const App = () => {
       {/* <AddFunds/> */}
       
    {/* cart ko lagi */}
-   <Router>
+   {/* <Router>
       <Routes>
         <Route
           path="/"
@@ -41,7 +43,7 @@ const App = () => {
         />
         <Route path="/cart" element={<CartPage cart={cart} />} />
       </Routes>
-    </Router>
+    </Router> */}
     {/* end */}
     </>
   )

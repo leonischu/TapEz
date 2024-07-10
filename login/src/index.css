@@ -1,4 +1,6 @@
 
+
+
 .logo img {
     height: 50px;
     margin: 20px;
@@ -10,4 +12,8 @@
 }
 .wallet{
     margin-top: 2%;
+}
+/* landing page css */
+.land{
+    background-color: #F3F7EC;
 }
