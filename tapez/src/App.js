@@ -10,12 +10,13 @@ import Cont from './components/cont';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import HomeP from './HOME/HomeP';
-
+import BasicTable from './HOME/Cards/Table';
 
 const App = () => {
   return (
    <>
-   <HomeP></HomeP>
+   <BasicTable/>
+   {/* <HomeP></HomeP> */}
    {/* <Navbar/>
           <Header />
           <HowItWorks />
